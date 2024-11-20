@@ -2,7 +2,7 @@
   {
     "$id": "1",
     "user_id": "1",
-    "name": "Grand Conference Hall",
+    "name": "Grand Conference Halls",
     "description": "A spacious room with modern amenities, suitable for large conferences and events.",
     "sqft": 3000,
     "capacity": 100,
