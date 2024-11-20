@@ -10,7 +10,7 @@ const RoomCard = ({ room }) => {
       <div className="bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
         <div className="flex flex-col sm:flex-row sm:space-x-4">
           <Image
-            src={`/images/${room.image}`}
+            src={`/images/rooms/${room.image}`}
             alt={room.name}
             className="w-full sm:w-32 sm:h-32 mb-3 sm:mb-0 object-cover rounded-lg"
             width={400}
