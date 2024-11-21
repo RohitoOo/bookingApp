@@ -96,17 +96,20 @@ const Header = () => {
                     </Link>
                   </>
                 )}
-
-                <Link href="/rooms/my">
-                  <FaBuilding className="inline mr-1" /> My Rooms
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  href="/login"
-                  className="mx-3 text-gray-800 hover:text-gray-600"
-                >
-                  <FaSignOutAlt className="inline mr-1" /> Sign Out
-                </button>
+                {isAuthenticated && (
+                  <>
+                    <Link href="/rooms/my">
+                      <FaBuilding className="inline mr-1" /> My Rooms
+                    </Link>
+                    <button
+                      onClick={handleLogout}
+                      href="/login"
+                      className="mx-3 text-gray-800 hover:text-gray-600"
+                    >
+                      <FaSignOutAlt className="inline mr-1" /> Sign Out
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -122,18 +125,23 @@ const Header = () => {
               Rooms
             </Link>
             {/* <!-- Logged In Only --> */}
-            <Link
-              href="/bookings"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-            >
-              Bookings
-            </Link>
-            <Link
-              href="/add-room"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-            >
-              Add Room
-            </Link>
+
+            {isAuthenticated && (
+              <>
+                <Link
+                  href="/bookings"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Bookings
+                </Link>
+                <Link
+                  href="/add-room"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                >
+                  Add Room
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </header>
