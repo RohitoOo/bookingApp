@@ -1,10 +1,29 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useActionState } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import Heading from "@/components/Heading";
+import createRoom from "@/app/actions/createRoom";
 
 const AddRoom = () => {
+  const [state, formAction] = useActionState(createRoom, {});
+
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log(state);
+    if (state?.error) toast.error(state.error);
+    if (state?.success) {
+      toast.success("Room Added Successfully");
+      router.push("/");
+    }
+  }, [state]);
+
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg p-6 w-full">
-        <form>
+        <form action={formAction}>
           <div className="mb-4">
             <label
               htmlFor="name"
