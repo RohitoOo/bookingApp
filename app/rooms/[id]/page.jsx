@@ -3,7 +3,7 @@ import React from "react";
 import Heading from "@/components/Heading";
 import Link from "next/link";
 import getSingleRoom from "@/app/actions/getSingleRoom";
-import Image from "next/Image";
+import Image from "next/image";
 import { FaChevronLeft } from "react-icons/fa";
 import BookingForm from "@/components/BookingForm";
 
