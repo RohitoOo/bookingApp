@@ -7,8 +7,9 @@ const BookingsPage = async () => {
 
   return (
     <>
+      <Heading title="My Bookings" />
       {bookings.length === 0
-        ? console.log("No bookings")
+        ? "No bookings"
         : bookings.map((booking) => {
             console.log(booking);
             return <BookedRoomCard booking={booking} />;
