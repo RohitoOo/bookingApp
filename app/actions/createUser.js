@@ -20,7 +20,7 @@ async function createUser(previousState, formData) {
       error: "Passwords must be atleast 8 characters long",
     };
   }
-  if (password.length !== confirmPassword) {
+  if (password !== confirmPassword) {
     return {
       error: "Passwords do not match",
     };

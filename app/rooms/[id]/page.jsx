@@ -9,10 +9,10 @@ import BookingForm from "@/components/BookingForm";
 
 const RoomPage = async ({ params }) => {
   const { id } = params;
-  console.log("ROOOM ROOM", id);
+  // console.log("ROOOM ROOM", id);
 
   const room = await getSingleRoom(id);
-  console.log("ROOOM ROOM", room);
+  // console.log("ROOOM ROOM", room);
   if (!room) return <Heading title="Room Not Found" />;
 
   const bucketId = process.env.NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_ROOMS;
